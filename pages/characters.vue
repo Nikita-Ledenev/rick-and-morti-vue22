@@ -1,21 +1,21 @@
 <template>
-  <div class="text">HelloWorld</div>
+  <section>
+    <div class="text">Characters Test Nuxt</div>
+  </section>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-
-export default Vue.extend({
-  components: {},
+<script>
+export default {
   layout: "RickAndMortiHeader",
-  name: "IndexPage",
-});
+};
 </script>
+
 <style lang="css">
 .text {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  font-size: 25px;
+  color: black;
 }
 </style>
