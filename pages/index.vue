@@ -1,21 +1,17 @@
 <template>
-  <div class="text">HelloWorld</div>
+  <div class="rick-and-morti">
+    <RickAndMortiMainVue />
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import RickAndMortiMainVue from "~/components/RickAndMortiMain.vue";
 
 export default Vue.extend({
-  components: {},
   layout: "RickAndMortiHeader",
-  name: "IndexPage",
+  components: { RickAndMortiMainVue },
+  name: "rick-and-morti",
 });
 </script>
-<style lang="css">
-.text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-</style>
+<style scroped></style>

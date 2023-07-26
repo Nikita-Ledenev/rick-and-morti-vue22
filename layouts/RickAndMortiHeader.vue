@@ -1,11 +1,13 @@
 <template>
   <div>
     <div class="rick-and-morti-header">
-      <a href="/" class="logo">CompanyLogo</a>
+      <nuxt-link to="/" class="logo">
+        <Logo />
+      </nuxt-link>
       <div class="rick-and-morti-header__right">
-        <nuxt-link class="rick-and-morti-header__link" to="/characters"
-          >Characters</nuxt-link
-        >
+        <nuxt-link class="rick-and-morti-header__link" to="/characters">
+          Characters
+        </nuxt-link>
         <nuxt-link to="/locations">Locations</nuxt-link>
         <nuxt-link to="/episodes">Episodes</nuxt-link>
       </div>
@@ -15,54 +17,50 @@
 </template>
 
 <script>
-export default {};
+import Logo from "~/static/logoRickAndMorti.svg?inline";
+export default {
+  components: { Logo },
+};
 </script>
 
-<style scoped>
-.rick-and-morti-header {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 20px 10px;
+<style lang="css" scoped>
+body {
+  margin: 0 auto;
 }
-
+.rick-and-morti-header {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  margin-left: 150px;
+}
 .rick-and-morti-header a {
   float: left;
   color: black;
   text-align: center;
-  padding: 12px;
   text-decoration: none;
   font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
-}
-
-.rick-and-morti-header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.rick-and-morti-header a:hover {
-  background-color: green;
-  color: black;
-}
-
-.rick-and-morti-header a.active {
-  background-color: dodgerblue;
-  color: white;
+  font-size: 23px;
 }
 
 .rick-and-morti-header__right {
-  float: right;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-right: 150px;
+  color: black;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 500px) {
   .rick-and-morti-header a {
-    float: none;
     display: block;
     text-align: left;
-  }
-  .rick-and-morti-header__right {
-    float: none;
   }
 }
 </style>

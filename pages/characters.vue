@@ -1,21 +1,30 @@
 <template>
   <section>
-    <div class="text">Characters Test Nuxt</div>
+    <div class="rick-and-morti-characters">
+      <div class="rick-and-morti-characters__container">
+        <img class="rick-and-morti-main__logo" src="~/static/logoMain.svg" />
+        <RickAndMortiCard />
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
+import RickAndMortiCard from "~/components/RickAndMortiCard.vue";
 export default {
+  components: { RickAndMortiCard },
   layout: "RickAndMortiHeader",
 };
 </script>
 
-<style lang="css">
-.text {
+<style lang="css" scoped>
+.rick-and-morti-characters {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
-  color: black;
+}
+.rick-and-morti-main__logo {
+  border-radius: 15px;
+  margin-top: 80px;
 }
 </style>
